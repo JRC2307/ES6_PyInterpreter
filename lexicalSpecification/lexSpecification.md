@@ -5,148 +5,152 @@
 ## Lexical Specification table
 
 <head>
-    <link href="../mdStyles/style.css" rel="stylesheet">
+  <link href="../mdStyles/style.css" rel="stylesheet">
 </head>
 <body>
 <table>
   <tr>
-    <th>Priority</th>
     <th>Lexeme</th>
     <th>Token Name</th>
     <th>Token</th>
     <th>REGEX</th>
+    <th>Priority</th>
   </tr>
   <tr>
-    <td>1</td>
+    <td>IF</td>
     <td>if</td>
-    <td>If</td>
-    <td>&lt;if, conditional&gt;</td>
+    <td>&lt;IF:conditional&gt;</td>
     <td></td>
   </tr>
-    <tr>
-    <td>2</td>
+  <tr>
+    <td>ELSE</td>
     <td>else</td>
-    <td>Else</td>
-    <td>&lt;else, conditional&gt;</td>
+    <td>&lt;ELSE:conditional&gt;</td>
     <td></td>
   </tr>
-    <tr>
-    <td>3</td>
-    <td>for</td>
-    <td>For loop</td>
-    <td></td>
-    <td></td>
-  </tr>
-    <tr>
-    <td>4</td>
-    <td>var</td>
-    <td>Global Variable</td>
-    <td></td>
+    <tr>    
+    <td>WHILE</td>
+    <td>while loop</td>
+    <td>&lt;WHILE:loop&gt;</td>
     <td></td>
   </tr>
-    <tr>
-    <td>5</td>
-    <td>let</td>
-    <td>Block Scope var</td>
-    <td></td>
-    <td></td>
-  </tr>
-    <tr>
-    <td>6</td>
-    <td>string</td>
-    <td>String</td>
-    <td></td>
+  <tr>    
+    <td>VAR</td>
+    <td>ID</td>
+    <td>&lt;ID:name&gt;</td>
     <td></td>
   </tr>
-    <tr>
-    <td>7</td>
-    <td>bool</td>
-    <td>Boolean</td>
-    <td></td>
-    <td></td>
-  </tr>
-    <tr>
-    <td>8</td>
-    <td>int</td>
-    <td>Integer</td>
-    <td></td>
+  <tr>    
+    <td>CONST</td>
+    <td>constant ID</td>
+    <td>&lt;ID:const_name&gt;</td>
     <td></td>
   </tr>
-    <tr>
-    <td>9</td>
-    <td>plus</td>
-    <td>Plus Op</td>
-    <td></td>
-    <td></td>
-  </tr>
-    <tr>
-    <td>10</td>
-    <td>minus</td>
-    <td>Minus Op</td>
-    <td></td>
+  <tr>    
+    <td>STRING</td>
+    <td>string type</td>
+    <td>&lt;STRING:type&gt;</td>
     <td></td>
   </tr>
-    <tr>
-    <td>11</td>
-    <td>divide</td>
+  <tr>    
+    <td>BOOLEAN</td>
+    <td>boolean type</td>
+    <td>&lt;BOOL:type&gt;</td>
+    <td></td>
+  </tr>
+  <tr>    
+    <td>NUMBER</td>
+    <td>Numerical type</td>
+    <td>&lt;NUM:type&gt;</td>
+    <td></td>
+  </tr>
+  <tr>    
+    <td>PLUS</td>
+    <td>plus operation</td>
+    <td>&lt;PLUS:+&gt;</td>
+    <td></td>
+  </tr>
+  <tr>    
+    <td>MINUS</td>
+    <td>minus operation</td>
+    <td>&lt;MINUS:-&gt;</td>
+    <td></td>
+  </tr>
+  <tr>    
+    <td>DIVIDE</td>
     <td>Division Op</td>
-    <td></td>
+    <td>&lt;DIV:/&gt;</td>
     <td></td>
   </tr>
-    <tr>
-    <td>12</td>
-    <td>multiply</td>
+  <tr>    
+    <td>MULT</td>
     <td>Multiplicaton Op</td>
-    <td></td>
-    <td></td>
-  </tr>
-    <tr>
-    <td>13</td>
-    <td>Equals</td>
-    <td>Equals</td>
-    <td></td>
+    <td>&lt;MULT:*&gt;</td>
     <td></td>
   </tr>
-    <tr>
-    <td>14</td>
+  <tr>    
+    <td>EQ</td>
+    <td>Equals</td>
+    <td>&lt;EQ:=&gt;</td>
+    <td></td>
+  </tr>
+  <!-- <tr>    
     <td>Compare</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
-    <tr>
-    <td>15</td>
+  <tr>    
     <td>greatThan</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
-    <tr>
-    <td>16</td>
+  <tr>    
     <td>lessThan</td>
     <td></td>
     <td></td>
     <td></td>
-  </tr>
-    <tr>
-    <td>17</td>
+  </tr>--> 
+  <tr>    
     <td>lParen</td>
-    <td></td>
+    <td>Left parenthesis</td>
     <td></td>
     <td></td>
   </tr>
-    <tr>
-    <td>18</td>
+  <tr>    
     <td>rParen</td>
-    <td></td>
+    <td>Right parenthesis</td>
     <td></td>
     <td></td>
   </tr>
-    <tr>
-    <td>19</td>
+  <tr>    
+    <td>lBckt</td>
+    <td>Left bracket</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>    
+    <td>rBckt</td>
+    <td>Right bracket</td>
+    <td></td>
+    <td></td>
+  </tr>  
+  <tr>   
     <td>semiC</td>
     <td></td>
     <td></td>
+    <td></td>
+  </tr>
+    <td>RETURN</td>
+    <td>Global Variable</td>
+    <td>&lt;VAR, loop&gt;</td>
+    <td></td>
+  </tr>
+  <tr>    
+    <td>BRACKET</td>
+    <td>Global Variable</td>
+    <td>&lt;VAR, loop&gt;</td>
     <td></td>
   </tr>
 </table>
