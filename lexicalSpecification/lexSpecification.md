@@ -38,9 +38,9 @@
     <td>5</td>
   </tr>
   <tr>    
-    <td>VAR</td>
+    <td>LET</td>
     <td>ID</td>
-    <td>&lt;ID:name&gt;</td>
+    <td>&lt;LET:name&gt;</td>
     <td>r'[a-zA-z][a-zA-z0-9_]*'</td>
     <td>1</td>
   </tr>
@@ -144,7 +144,7 @@
   </tr>
     <td>RETURN</td>
     <td>Global Variable</td>
-    <td>&lt;VAR, loop&gt;</td>
+    <td>&lt;RETURN:return&gt;</td>
     <td>r'[return]'</td>
     <td>14</td>
   </tr>
@@ -154,7 +154,7 @@
 ### Lexical Specification Python
 
 ```
-tokens = (IF, ELSE, WHILE, VAR, LET, CONST, STRING, BOOL, NUMBER,
+tokens = (IF, ELSE, WHILE, LET, CONST, STRING, BOOL, NUMBER,
 PLUS, MINUS, DIVIDE, MULT, EQ,
 lPAREN, rPAREN, lBckt, rBckt, semiC
 RETURN)
@@ -163,7 +163,6 @@ RETURN)
 t_IF       = r'if' 
 t_ELSE     = r'else'
 t_WHILE    = r'while'
-t_VAR      = r'[a-zA-z][a-zA-z0-9_]*'
 t_LET      = r'[a-zA-z][a-zA-z0-9_]*'     #starts with letters, then letters, numbers & _
 t_CONST    = r'[0-9]'
 t_STRING   = r'[.]*'                       #Any character except newline
